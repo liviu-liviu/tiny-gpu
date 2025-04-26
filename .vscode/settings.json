@@ -1,0 +1,7 @@
+{
+    "workbench.startupEditor": "none",
+    // sudo snap install universal-ctags
+    "verilog.ctags.path": "/snap/bin/ctags",
+    "verilog.linting.linter": "iverilog",
+    // "verilog.linting.path": "/usr/bin/iverilog"
+}
