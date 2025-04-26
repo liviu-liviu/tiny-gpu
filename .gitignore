@@ -9,3 +9,5 @@ results.xml
 
 *.vcd
 *.gtkw
+
+.wtree/
