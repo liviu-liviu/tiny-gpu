@@ -21,17 +21,17 @@ module scheduler #(
     input wire start,
     
     // Control Signals
-    input logic decoded_mem_read_enable,
-    input logic decoded_mem_write_enable,
-    input logic decoded_ret,
+    input decoded_mem_read_enable,
+    input decoded_mem_write_enable,
+    input decoded_ret,
 
     // Memory Access State
-    input logic [2:0] fetcher_state,
-    input logic [1:0] lsu_state [THREADS_PER_BLOCK-1:0],
+    input [2:0] fetcher_state,
+    input [1:0] lsu_state [THREADS_PER_BLOCK-1:0],
 
     // Current & Next PC
     output logic [7:0] current_pc,
-    input logic [7:0] next_pc [THREADS_PER_BLOCK-1:0],
+    input [7:0] next_pc [THREADS_PER_BLOCK-1:0],
 
     // Execution State
     output logic [2:0] core_state,

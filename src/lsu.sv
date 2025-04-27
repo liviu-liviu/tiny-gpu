@@ -11,25 +11,25 @@ module lsu (
     input wire enable, // If current block has less threads then block size, some LSUs will be inactive
 
     // State
-    input logic [2:0] core_state,
+    input [2:0] core_state,
 
     // Memory Control Sgiansl
-    input logic decoded_mem_read_enable,
-    input logic decoded_mem_write_enable,
+    input decoded_mem_read_enable,
+    input decoded_mem_write_enable,
 
     // Registers
-    input logic [7:0] rs,
-    input logic [7:0] rt,
+    input [7:0] rs,
+    input [7:0] rt,
 
     // Data Memory
     output logic mem_read_valid,
     output logic [7:0] mem_read_address,
-    input logic mem_read_ready,
-    input logic [7:0] mem_read_data,
+    input mem_read_ready,
+    input [7:0] mem_read_data,
     output logic mem_write_valid,
     output logic [7:0] mem_write_address,
     output logic [7:0] mem_write_data,
-    input logic mem_write_ready,
+    input mem_write_ready,
 
     // LSU Outputs
     output logic [1:0] lsu_state,

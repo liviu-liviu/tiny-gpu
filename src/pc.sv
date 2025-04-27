@@ -16,19 +16,19 @@ module pc #(
     input wire enable, // If current block has less threads then block size, some PCs will be inactive
 
     // State
-    input logic [2:0] core_state,
+    input [2:0] core_state,
 
     // Control Signals
-    input logic [2:0] decoded_nzp,
-    input logic [DATA_MEM_DATA_BITS-1:0] decoded_immediate,
-    input logic decoded_nzp_write_enable,
-    input logic decoded_pc_mux, 
+    input [2:0] decoded_nzp,
+    input [DATA_MEM_DATA_BITS-1:0] decoded_immediate,
+    input decoded_nzp_write_enable,
+    input decoded_pc_mux, 
 
     // ALU Output - used for alu_out[2:0] to compare with NZP register
-    input logic [DATA_MEM_DATA_BITS-1:0] alu_out,
+    input [DATA_MEM_DATA_BITS-1:0] alu_out,
 
     // Current & Next PCs
-    input logic [PROGRAM_MEM_ADDR_BITS-1:0] current_pc,
+    input [PROGRAM_MEM_ADDR_BITS-1:0] current_pc,
     output logic [PROGRAM_MEM_ADDR_BITS-1:0] next_pc
 );
     logic [2:0] nzp;

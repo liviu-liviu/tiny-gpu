@@ -14,24 +14,24 @@ module registers #(
     input wire enable, // If current block has less threads then block size, some registers will be inactive
 
     // Kernel Execution
-    input logic [7:0] block_id,
+    input [7:0] block_id,
 
     // State
-    input logic [2:0] core_state,
+    input [2:0] core_state,
 
     // Instruction Signals
-    input logic [3:0] decoded_rd_address,
-    input logic [3:0] decoded_rs_address,
-    input logic [3:0] decoded_rt_address,
+    input [3:0] decoded_rd_address,
+    input [3:0] decoded_rs_address,
+    input [3:0] decoded_rt_address,
 
     // Control Signals
-    input logic decoded_reg_write_enable,
-    input logic [1:0] decoded_reg_input_mux,
-    input logic [DATA_BITS-1:0] decoded_immediate,
+    input decoded_reg_write_enable,
+    input [1:0] decoded_reg_input_mux,
+    input [DATA_BITS-1:0] decoded_immediate,
 
     // Thread Unit Outputs
-    input logic [DATA_BITS-1:0] alu_out,
-    input logic [DATA_BITS-1:0] lsu_out,
+    input [DATA_BITS-1:0] alu_out,
+    input [DATA_BITS-1:0] lsu_out,
 
     // Registers
     output logic [7:0] rs,

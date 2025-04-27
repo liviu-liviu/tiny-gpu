@@ -17,7 +17,7 @@ module dispatch #(
     input wire [7:0] thread_count,
 
     // Core States
-    input logic [NUM_CORES-1:0] core_done,
+    input [NUM_CORES-1:0] core_done,
     output logic [NUM_CORES-1:0] core_start,
     output logic [NUM_CORES-1:0] core_reset,
     output logic [7:0] core_block_id [NUM_CORES-1:0],

@@ -12,14 +12,14 @@ module fetcher #(
     input wire reset,
     
     // Execution State
-    input logic [2:0] core_state,
-    input logic [7:0] current_pc,
+    input [2:0] core_state,
+    input [7:0] current_pc,
 
     // Program Memory
     output logic mem_read_valid,
     output logic [PROGRAM_MEM_ADDR_BITS-1:0] mem_read_address,
-    input logic mem_read_ready,
-    input logic [PROGRAM_MEM_DATA_BITS-1:0] mem_read_data,
+    input mem_read_ready,
+    input [PROGRAM_MEM_DATA_BITS-1:0] mem_read_data,
 
     // Fetcher Output
     output logic [2:0] fetcher_state,
