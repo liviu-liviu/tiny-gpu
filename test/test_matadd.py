@@ -5,8 +5,14 @@ from .helpers.memory import Memory
 from .helpers.format import format_cycle
 from .helpers.logger import logger
 
+def start_debug_server():
+    import debugpy
+    debugpy.listen(("127.0.0.1", 4000)) 
+    debugpy.wait_for_client()
+
 @cocotb.test()
 async def test_matadd(dut):
+    # start_debug_server()
     # Program Memory
     program_memory = Memory(dut=dut, addr_bits=8, data_bits=16, channels=1, name="program")
     program = [
